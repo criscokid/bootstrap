@@ -162,13 +162,13 @@
     var that = this
     if (this.isShown && this.options.keyboard) {
       $(document).on('keyup.dismiss.modal', function ( e ) {
-  		if(e.which == 27){
-  			if($.type(that.options.keyboard) == 'function'){
-  				that.options.keyboard.call(that.$element);
-  			} else { 
-  				that.hide();
-  			}
-  		}
+    		if(e.which == 27){
+    			if($.type(that.options.keyboard) == 'function'){
+    				that.options.keyboard.call(that.$element);
+    			} else { 
+    				that.hide();
+    			}
+    		}
       })
     } else if (!this.isShown) {
       $(document).off('keyup.dismiss.modal')
